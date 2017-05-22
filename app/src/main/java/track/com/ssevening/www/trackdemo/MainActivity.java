@@ -32,6 +32,7 @@ public class MainActivity extends BaseActivity {
         item.spm = "1";
         productInfo.items.add(item);
 
+        // 控件点击和SPM打点
         tv_product.setOnClickListener(new TrackOnClickListener() {
             public Map<String, String> getTrackParams() {
                 HashMap<String, String> map = new HashMap<>();
@@ -84,8 +85,12 @@ public class MainActivity extends BaseActivity {
 
         if (TrackNamesCheck.checkIfHaveMutiPageName(new PageNames())) {
             Toast.makeText(this, "有重复的页面名称，请检查！！！", Toast.LENGTH_LONG).show();
+            // 重复的页面名称，属于错误，打自定义打点
+            MyApp.trackEvent("MutiPageName");
             finish();
         }
+
+
     }
 
     @Override

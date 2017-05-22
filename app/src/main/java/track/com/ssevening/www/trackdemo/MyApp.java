@@ -75,6 +75,10 @@ public class MyApp extends Application {
         return app;
     }
 
+    public static void trackEvent(String eventName) {
+        Log.d(TAG, "track event: " + eventName);
+    }
+
 
     /**
      * 比如 TrackDemo的 首页 产品点击区 产品ID点击
@@ -85,8 +89,7 @@ public class MyApp extends Application {
      * @param d 控件ID
      */
     public void trackSpm(String a, String b, String c, String d) {
-
-        Log.d(TAG, "track deviceId: " + Installation.id(this));
+        Log.d(TAG, "track spm: " + a + "." + b + "." + c + "." + d);
     }
 
     public void trackDevice() {
