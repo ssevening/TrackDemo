@@ -5,5 +5,7 @@ package track.com.ssevening.www.trackdemo;
  */
 
 public class PageNames {
-    public static String PAGE_MAIN = "HOME";
+    public static final String TRACK_PAGE_HOME = "Home";
+    public static final String TRACK_PAGE_PRODUCT = "Product";
+
 }

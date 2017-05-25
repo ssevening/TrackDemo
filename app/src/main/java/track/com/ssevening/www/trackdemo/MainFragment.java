@@ -34,6 +34,6 @@ public class MainFragment extends BaseFragment {
      */
     @Override
     public String getPageName() {
-        return PageNames.PAGE_MAIN;
+        return PageNames.TRACK_PAGE_HOME;
     }
 }

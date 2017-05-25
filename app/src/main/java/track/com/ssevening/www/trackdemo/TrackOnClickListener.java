@@ -22,10 +22,10 @@ public class TrackOnClickListener implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         MyApp.getApp().trackClick(getClickName(), getTrackParams());
-        MyApp.getApp().trackSpm("1234", getPageName(), getSpmCString(), getSpmDString());
+        MyApp.getApp().trackSpm("1234", getPage(), getSpmCString(), getSpmDString());
     }
 
-    public String getPageName() {
+    public String getPage() {
         return "";
     }
 

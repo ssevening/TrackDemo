@@ -10,11 +10,11 @@ public class ProductActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_product);
     }
 
     @Override
     public String getPageName() {
-        return PageNames.PAGE_MAIN;
+        return PageNames.TRACK_PAGE_PRODUCT;
     }
 }

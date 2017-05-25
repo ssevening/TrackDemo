@@ -26,9 +26,5 @@ public class BaseActivity extends AppCompatActivity implements Track {
 
         return new HashMap<>();
     }
-
-    public boolean needTrack() {
-        return true;
-    }
 }
 

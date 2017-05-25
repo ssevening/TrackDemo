@@ -53,7 +53,7 @@ public class MainActivity extends BaseActivity {
 
             @Override
             // SPM 页面名称
-            public String getPageName() {
+            public String getPage() {
                 return getPageName();
             }
 
@@ -83,7 +83,7 @@ public class MainActivity extends BaseActivity {
 //            }
 //        });
 
-        if (TrackNamesCheck.checkIfHaveMutiPageName(new PageNames())) {
+        if (TrackNamesCheck.checkIfHaveMutiPageNames(PageNames.class)) {
             Toast.makeText(this, "有重复的页面名称，请检查！！！", Toast.LENGTH_LONG).show();
             // 重复的页面名称，属于错误，打自定义打点
             MyApp.trackEvent("MutiPageName");
@@ -95,6 +95,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public String getPageName() {
-        return PageNames.PAGE_MAIN;
+        return PageNames.TRACK_PAGE_HOME;
     }
 }
