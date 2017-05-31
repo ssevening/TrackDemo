@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--加在这里，忽略lint说我们多语言翻译不全的问题-->
+    <string name="app_language" tools:ignore="MissingTranslation">TrackDemo</string>
+</resources>

@@ -11,9 +11,36 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+    signingConfigs {
+        debug {
+            keyAlias 'android.keystore'
+            keyPassword 'androidthing'
+            storeFile file('android.keystore')
+            storePassword 'androidthing'
+        }
+        release {
+            keyAlias 'android.keystore'
+            keyPassword 'androidthing'
+            storeFile file('android.keystore')
+            storePassword 'androidthing'
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            // 这里shrinkResources 设置为true，就可以清除掉没有引用的资源文件了
+            shrinkResources true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

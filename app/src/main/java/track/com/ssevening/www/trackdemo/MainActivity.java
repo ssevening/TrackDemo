@@ -97,4 +97,8 @@ public class MainActivity extends BaseActivity {
     public String getPageName() {
         return PageNames.TRACK_PAGE_HOME;
     }
+
+    public void onProductClick(View view) {
+        // 这里通过布局添加了一个点击事件
+    }
 }
