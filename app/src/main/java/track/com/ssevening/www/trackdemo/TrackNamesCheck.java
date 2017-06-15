@@ -34,8 +34,12 @@ public class TrackNamesCheck {
                 // L.d("name:" + f.getName() + "value = " + val.toString());
                 String pageName = val.toString();
                 if (pageName.length() > 19) {
+                    Log.d("result1", pageName + "," + pageName.substring(0, 19));
                     pageName = pageName.substring(0, 19);
+                } else {
+                    Log.d("result1", pageName + "," + pageName);
                 }
+
 
                 if (pageList.contains(pageName)) {
                     Log.d("muti", pageName);
@@ -44,6 +48,7 @@ public class TrackNamesCheck {
                     pageList.add(pageName);
                     Log.d("pageName", pageName);
                 }
+
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
