@@ -29,6 +29,6 @@ public class ProductActivity extends BaseActivity {
 
     @Override
     public String getPageName() {
-        return PageNames.TRACK_PAGE_PRODUCT;
+        return PageNames.TRACK_PAGE_HOME;
     }
 }

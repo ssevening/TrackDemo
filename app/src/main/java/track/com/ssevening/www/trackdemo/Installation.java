@@ -42,10 +42,16 @@ public class Installation {
 
     private static void writeInstallationFile(File installation, Context context) throws IOException {
         FileOutputStream out = new FileOutputStream(installation);
-        String imei = ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
-        String androidId = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
-        String id = UUID.randomUUID().toString();
-        out.write((androidId + "_" + imei + "_" + id).getBytes());
-        out.close();
+        try {
+            String imei = ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
+            String androidId = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+            String id = UUID.randomUUID().toString();
+            out.write((androidId + "_" + imei + "_" + id).getBytes());
+            out.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

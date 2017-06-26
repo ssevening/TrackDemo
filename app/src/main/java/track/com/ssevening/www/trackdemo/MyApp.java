@@ -21,7 +21,7 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         // 打点测试ID
-        trackDevice();
+        // trackDevice();
         app = this;
 
         this.registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
@@ -66,7 +66,6 @@ public class MyApp extends Application {
                         trackPage(track.getPageName(), track.getTrackParam());
                     }
                 }
-
             }
         });
     }
